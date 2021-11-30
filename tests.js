@@ -87,7 +87,7 @@ testCase('Test GET /posts?userId=<id>&title=<title>', () => {
     });
 	
 	// test for GET	/posts without 'userId' ant 'title'
-    it('it should GET array with some posts by userId', (done) => {
+    it('it should GET empty array without userId and title', (done) => {
         chai.request('https://jsonplaceholder.typicode.com')
             .get('/posts?userId=''&title='')
             .end((err, res) => {
